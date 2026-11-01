@@ -5,7 +5,7 @@
 <dialog id="confirmDialog"><h3>ยืนยันการเข้าสอน</h3><p class="muted" id="modalCourse"></p><form id="confirmForm"><div class="field"><label>สถานะ</label><select id="attStatus"><option value="taught">เข้าสอนครบตามตาราง</option><option value="partial">เข้าสอนบางส่วน</option></select></div><div class="field"><label>เวลาเริ่มจริง</label><input id="actualStart" type="datetime-local" required></div><div class="field"><label>เวลาสิ้นสุดจริง</label><input id="actualEnd" type="datetime-local" required></div><div class="field"><label>หัวข้อที่สอน</label><textarea id="topic" rows="2"></textarea></div><div class="field"><label>หมายเหตุ</label><textarea id="notes" rows="2"></textarea></div><div class="rowflex"><button type="button" class="btn alt" id="closeModal">ยกเลิก</button><button type="submit" class="btn">บันทึกการยืนยัน</button></div><p id="confirmError" role="alert" style="color:#a53939"></p></form></dialog>
 <script type="module">
 import {createClient} from 'https://esm.sh/@supabase/supabase-js@2';
-const CFG={url:'__SUPABASE_URL__',key:'__SUPABASE_PUBLISHABLE_KEY__'};
+const CFG={url:'https://prapaporn-munkong.github.io/teaching/',key:'sb_publishable_qnFHjpAN9GAHfMHaBhpNow_aMlopYvH'};
 const configured=CFG.url.startsWith('https://')&&!CFG.url.includes('__')&&!CFG.key.includes('__');
 const supabase=configured?createClient(CFG.url,CFG.key):null;
 const $=id=>document.getElementById(id);const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
